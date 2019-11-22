@@ -2,12 +2,16 @@ package guru.springframework;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.junit4.SpringRunner;
 
+
+@RunWith(SpringRunner.class)
 @SpringBootTest
-class DiDemoApplicationTests {
+public class DiDemoApplicationTests {
 
     @Test
-    void contextLoads() {
+    public void contextLoads() {
     }
 
 }
