@@ -17,7 +17,7 @@ public class DiDemoApplication {
         String greeting = controller.hello();
         System.out.println(greeting);
 
-        System.out.println("-------property");
+        System.out.println("-------Property");
         PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
         System.out.println(propertyInjectedController.getGreeting());
 
