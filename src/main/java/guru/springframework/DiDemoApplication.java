@@ -1,9 +1,6 @@
 package guru.springframework;
 
-import guru.springframework.controllers.ConstructorInjectedController;
-import guru.springframework.controllers.MyController;
-import guru.springframework.controllers.PropertyInjectedController;
-import guru.springframework.controllers.SetterInjectedController;
+import guru.springframework.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -14,8 +11,11 @@ public class DiDemoApplication {
 
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(DiDemoApplication.class, args);
-        MyController controller = (MyController) ctx.getBean("myController");
 
+        I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+        System.out.println(i18nController.hello());
+
+        MyController controller = (MyController) ctx.getBean("myController");
         System.out.println("-------Primary Bean");
         System.out.println(controller.hello());
 
