@@ -7,6 +7,7 @@ import guru.springframework.controllers.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Controller;
 
 @SpringBootApplication
 public class DiDemoApplication {
@@ -14,8 +15,9 @@ public class DiDemoApplication {
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(DiDemoApplication.class, args);
         MyController controller = (MyController) ctx.getBean("myController");
-        String greeting = controller.hello();
-        System.out.println(greeting);
+
+        System.out.println("-------Primary Bean");
+        System.out.println(controller.hello());
 
         System.out.println("-------Property");
         PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
