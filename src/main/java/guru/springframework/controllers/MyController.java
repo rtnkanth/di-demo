@@ -13,6 +13,7 @@ public class MyController {
     }
 
     public String hello(){
-        return  greetingService.sayGreeting();
+        System.out.println("Hello!!");
+        return greetingService.sayGreeting();
     }
 }

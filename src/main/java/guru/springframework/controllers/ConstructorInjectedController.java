@@ -13,10 +13,7 @@ public class ConstructorInjectedController {
     }
 
     public String sayHello(){
-        return greetingService.sayGreeting();
-    }
 
-    public String getGreeting() {
         return greetingService.sayGreeting();
     }
 }
